@@ -213,3 +213,26 @@ git status (--short) # --short命令可以使得相关输出显得更加紧凑
 
 ### 4.2 存储在暂存区中的快照
 
+```shell
+git diff --staged # 所显示的是当前版本库中HEAD提交与暂存区之间的不同之处
+```
+
+### 4.3 怎样的修改不该被提交
+
+```shell
+git reset HEAD .
+```
+
+### 4.4 用.gitignore忽略非版本控制文件
+
+使用项目目录下的.gitignore文件。
+
+### 4.5 储藏
+
+~~~shell
+git stash #将工作区和暂存区的修改保存在一个stack缓存中
+git stash pop # 恢复栈顶的修改
+git stash list
+git stash pop stash@{1} #恢复某个更早的修改
+~~~
+
